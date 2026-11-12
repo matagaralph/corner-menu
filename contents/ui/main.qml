@@ -60,6 +60,7 @@ PlasmoidItem {
         // define highlight
         PlasmaExtras.Highlight {
             id: delegateHighlight
+            hovered: true
             visible: false
         }
         
@@ -82,10 +83,14 @@ PlasmoidItem {
                 padding: 0
                 topPadding: 5
                 bottomPadding: 5
-                contentItem: Rectangle {
+                contentItem: Item {
                     implicitWidth: iwSize
                     implicitHeight: shSize
-                    color: "#1E000000"
+                    Rectangle {
+                        width: parent.width
+                        height: shSize
+                        color: "#1E000000"
+                    }
                 }
             }
             
@@ -112,10 +117,14 @@ PlasmoidItem {
                 padding: 0
                 topPadding: 5
                 bottomPadding: 5
-                contentItem: Rectangle {
+                contentItem: Item {
                     implicitWidth: iwSize
                     implicitHeight: shSize
-                    color: "#1E000000"
+                    Rectangle {
+                        width: parent.width
+                        height: shSize
+                        color: "#1E000000"
+                    }
                 }
             }
             
@@ -139,10 +148,14 @@ PlasmoidItem {
                 padding: 0
                 topPadding: 5
                 bottomPadding: 5
-                contentItem: Rectangle {
+                contentItem: Item {
                     implicitWidth: iwSize
                     implicitHeight: shSize
-                    color: "#1E000000"
+                    Rectangle {
+                        width: parent.width
+                        height: shSize
+                        color: "#1E000000"
+                    }
                 }
             }
             
@@ -178,10 +191,14 @@ PlasmoidItem {
                 padding: 0
                 topPadding: 5
                 bottomPadding: 5
-                contentItem: Rectangle {
+                contentItem: Item {
                     implicitWidth: iwSize
                     implicitHeight: shSize
-                    color: "#1E000000"
+                    Rectangle {
+                        width: parent.width
+                        height: shSize
+                        color: "#1E000000"
+                    }
                 }
             }
             
