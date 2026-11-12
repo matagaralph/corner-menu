@@ -104,7 +104,7 @@ Item {
         TextField {
             id: logOutSettings
             Kirigami.FormData.label: i18n ("Log Out :")
-            placeholderText: i18n("qdbus6 org.kde.ksmserver /KSMServer logout 0 0 0")
+            placeholderText: i18n("qdbus6 org.kde.Shutdown /Shutdown logout")
             enabled: showAdvancedMode.checked
         }
     }
