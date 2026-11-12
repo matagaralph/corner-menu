@@ -52,9 +52,10 @@ Item {
                 highlight.parent = item
                 highlight.width = item.width
                 highlight.height = item.height
+                highlight.visible = true
+            } else if (highlight.parent === item) {
+                highlight.visible = false
             }
-            // if the mouse is in the area, the condition will return a bool "true" to >> highlight.visible
-            highlight.visible = area.containsMouse
         }
     }
 
