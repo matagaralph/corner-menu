@@ -54,8 +54,57 @@ PlasmoidItem {
         readonly property string lockScreenCMD: Plasmoid.configuration.lockScreenSettings
         readonly property string logOutCMD: Plasmoid.configuration.logOutSettings
         
+        readonly property var menuItems: [aboutThisComputerItem, systemPreferencesItem, appStoreItem, forceQuitItem, sleepItem, restartItem, shutDownItem, lockScreenItem, logOutItem]
+
         Layout.preferredWidth: iwSize
         Layout.preferredHeight: aboutThisComputerItem.height * 11 // not the best way to code..
+
+        focus: true
+
+        function highlightItem(index) {
+            var item = menuItems[index]
+            delegateHighlight.parent = item
+            delegateHighlight.width = item.width
+            delegateHighlight.height = item.height
+            delegateHighlight.visible = true
+        }
+
+        function currentIndex() {
+            return delegateHighlight.visible ? menuItems.indexOf(delegateHighlight.parent) : -1
+        }
+
+        Keys.onPressed: (event) => {
+            var index = currentIndex()
+            switch (event.key) {
+            case Qt.Key_Down:
+                highlightItem((index + 1) % menuItems.length)
+                break
+            case Qt.Key_Up:
+                highlightItem((index <= 0 ? menuItems.length : index) - 1)
+                break
+            case Qt.Key_Return:
+            case Qt.Key_Enter:
+            case Qt.Key_Space:
+                if (index >= 0) {
+                    menuItems[index].clicked()
+                }
+                break
+            default:
+                return
+            }
+            event.accepted = true
+        }
+
+        Connections {
+            target: root
+            function onExpandedChanged() {
+                if (root.expanded) {
+                    fullRoot.forceActiveFocus()
+                } else {
+                    delegateHighlight.visible = false
+                }
+            }
+        }
         
         // define highlight
         PlasmaExtras.Highlight {
