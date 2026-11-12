@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "arsh.kxn@gmail.com",
+                "Name": "Arsh Bangar"
+            }
+        ],
+        "Category": "Application Launcher",
+        "Description": "Displays a list of leave options for system",
+        "Icon": "start-here-kde",
+        "Id": "org.kxn.cornerMenu",
+        "Name": "Corner Menu",
+        "Version": "1",
+        "Website": "nowebsite.com"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
