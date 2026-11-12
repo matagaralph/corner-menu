@@ -39,6 +39,7 @@ Item {
         id: area
         anchors.fill: parent
         hoverEnabled: true
+        cursorShape: Qt.PointingHandCursor
         onClicked: item.clicked()
         // detect the mouse on the item
         onContainsMouseChanged: {
