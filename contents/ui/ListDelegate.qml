@@ -74,6 +74,7 @@ Item {
             PlasmaComponents.Label {
                 id: label
                 anchors.fill: parent
+                verticalAlignment: Text.AlignVCenter
             }
         }
     }
