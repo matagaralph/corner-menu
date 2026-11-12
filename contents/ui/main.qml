@@ -97,7 +97,7 @@ PlasmoidItem {
             ListDelegate {
                 id: systemPreferencesItem
                 highlight: delegateHighlight
-                text: i18n("System Preferences...")
+                text: i18n("System Preferences")
                 onClicked: {
                     executable.exec(systemPreferencesCMD); // cmd exec
                 }
@@ -106,7 +106,7 @@ PlasmoidItem {
             ListDelegate {
                 id: appStoreItem
                 highlight: delegateHighlight
-                text: i18n("App Store...")
+                text: i18n("App Store")
                 onClicked: {
                     executable.exec(appStoreCMD); // cmd exec
                 }
@@ -131,7 +131,7 @@ PlasmoidItem {
             ListDelegate { 
                 id: forceQuitItem
                 highlight: delegateHighlight
-                text: i18n("Force Quit...")
+                text: i18n("Force Quit")
                 // right shortcut item
                 PlasmaComponents.Label {
                     text: "⌥⌘⎋ "
@@ -171,7 +171,7 @@ PlasmoidItem {
             ListDelegate { 
                 id: restartItem
                 highlight: delegateHighlight
-                text: i18n("Restart...")
+                text: i18n("Restart")
                 onClicked: {
                     executable.exec(restartCMD); // cmd exec
                 }
@@ -180,7 +180,7 @@ PlasmoidItem {
             ListDelegate { 
                 id: shutDownItem
                 highlight: delegateHighlight
-                text: i18n("Shut Down...")
+                text: i18n("Shut Down")
                 onClicked: {
                     executable.exec(shutDownCMD); // cmd exec
                 }
